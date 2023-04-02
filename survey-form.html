@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+  <h1 id="title">Festival attendance questionnaire</h1>
+  <p id="description">Thank you for filling out this survey. Your feedback helps us improve our
+    services.</p>
+  <form id="survey-form" method="POST">
+    <fieldset>
+      <label for="name" id="name-label">Full name <input id="name" name="name" type="text" required
+          placeholder="type your full name here..." /></label>
+      <label for="email" id="email-label">Email <input id="email" name="email" type="email" required
+          placeholder="type your email address here..." /></label>
+      <label for="phone" id="phone-label">Phone number <span class="clue">(optional)</span> <input id="phone"
+          name="phone" type="text" pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$"
+          placeholder="UK phone numbers only..." /></label>
+      <label for="age" id="age-label">Age <span class="clue">(years)</span> <input id="age" name="age" type="number"
+          min="18" max="110" required placeholder="you must be over 18" /></label>
+    </fieldset>
+    <fieldset>
+      <label for="rate-overall" id="rate-overall-label">How would you rate your overall experience? <span
+          class="clue">(0-awful,
+          10-excellent)</span> <input id="rate-overall" name="rate-overall" type="range" min="0" max="10" /></label>
+      <p>What areas could we improve? <span class="clue">(select all that apply)</span></p>
+      <label for="artists"><input id="artists" name="artists" type="checkbox" value="artists" />The artists</label>
+      <label for="facilities"><input id="facilities" name="facilities" type="checkbox"
+          value="facilities" />Facilities</label>
+      <label for="food"><input id="food" name="food" type="checkbox" value="food" />Food</label>
+      <label for="accomodation"><input id="accomodation" name="accomodation" type="checkbox"
+          value="accomodation" />Accomodation</label>
+      <label for="staff"><input id="staff" name="staff" type="checkbox" value="staff" />Staff</label>
+      <label for="cleanliness"><input id="cleanliness" name="cleanliness" type="checkbox"
+          value="cleanliness" />Cleanliness</label>
+      <label for="other"><input id="other" name="other" type="checkbox" value="other" />Other <span class="clue">(please
+          explain
+          below)</span></label>
+      <label for="other-explain">
+        <textarea id="other-explain" name="other-explain" maxlength="200" rows="3" cols="30"
+          placeholder="type your answer here..."></textarea>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="dropdown" id="dropdown-label">How did you hear about us? <select id="dropdown" name="dropdown"
+          required>
+          <option value="">Select one</option>
+          <option value="1">Google</option>
+          <option value="2">YouTube</option>
+          <option value="3">Instagram</option>
+          <option value="4">TV/Radio advertisement</option>
+          <option value="5">Friends/family</option>
+          <option value="6">Other</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <p id="come-again">Would you come again?</p>
+      <label for="yes-again"><input id="yes-again" name="come-again" type="radio" value="yes-again" />Yes</label>
+      <label for="not-again"><input id="not-again" name="come-again" type="radio" value="not-again" />No</label>
+      <label for="suggest">Any suggestions?<textarea id="suggest" name="suggest" maxlength="500" rows="3" cols="30"
+          placeholder="Let us know how we can improve..."></textarea></label>
+    </fieldset>
+    <fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </fieldset>
+  </form>
+</body>
+
+</html>
